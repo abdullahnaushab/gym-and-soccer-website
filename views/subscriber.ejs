@@ -1,0 +1,24 @@
+<% title = "Subscribers"; %>
+<% content = `
+<h2>Submitted Contact Forms</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% contacts.forEach(contact => { %>
+            <tr>
+                <td><%= contact.name %></td>
+                <td><%= contact.email %></td>
+                <td><%= contact.message %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+` %>
+<%- include('layout') %>
+
